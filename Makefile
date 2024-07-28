@@ -17,5 +17,5 @@ dev-db:
 	docker-compose up -d
 
 lint:
-	python3 flake8 _project_ apps
+	flake8 _project_ apps
 
