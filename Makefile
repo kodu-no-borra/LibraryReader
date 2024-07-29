@@ -1,5 +1,5 @@
 install:
-	poetry install
+	pip install -r requirements.txt
 
 superuser:
 	python3 manage.py createsuperuser
@@ -17,5 +17,5 @@ dev-db:
 	docker-compose up -d
 
 lint:
-	flake8 _project_ apps
+	flake8 my_project  apps
 
