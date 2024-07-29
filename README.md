@@ -1,4 +1,4 @@
-# MyL📚ibrary
+# My📚Library
 
 The application is a simplified analogue of the CRM system for the library.
 
