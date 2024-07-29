@@ -43,6 +43,8 @@ Also implemented API and an improved ADMIN PANEL
 
 ### *You must have:*
 
+- [Poetry](https://python-poetry.org)
+
 - [Django](https://www.djangoproject.com/)
 
 - [Django REST Framework](https://www.django-rest-framework.org/)
