@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements.txt
+	poetry install
 
 superuser:
 	python3 manage.py createsuperuser
@@ -18,5 +18,9 @@ dev-db:
 
 lint:
 	flake8 my_project  apps
+
+shell:
+	python3 manage.py shell
+
 
 

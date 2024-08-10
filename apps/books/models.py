@@ -1,5 +1,6 @@
 from django.db import models
 from apps.users.models import Reader
+from simple_history.models import HistoricalRecords
 
 
 class Book(models.Model):
@@ -15,6 +16,7 @@ class Book(models.Model):
         related_name='borrowed_books'
     )
     borrowed_date = models.DateTimeField(null=True, blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
