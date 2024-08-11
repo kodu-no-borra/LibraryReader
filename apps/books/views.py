@@ -64,3 +64,23 @@ class BorrowBookView(View):
 
         book.save()
         return redirect('list')
+
+
+"""
+class BorrowBookView(BorrowBookMixin, View):
+
+
+def post(self, request, *args, **kwargs):
+    
+    book = get_object_or_404(Book, id=kwargs['book_id'])
+    reader = get_object_or_404(Reader, user=request.user)
+
+    # Используем метод из миксина для обработки взятия / возврата книги
+    self.handle_borrow_or_return(book, reader, request)
+
+    return redirect('list')
+"""
+# Обработчик для взятия или возврата книги.
+# Использует BorrowBookMixin для обработки логики взятия и возврата книги.
+# Если книга взята пользователем, она возвращается.
+# Если книга доступна, создается запись о взятии.

@@ -23,3 +23,19 @@ class Book(models.Model):
 
     class Meta:
         ordering = ['title']
+
+
+"""
+class BorrowedBookRecord(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    reader = models.ForeignKey(Reader, on_delete=models.CASCADE)
+    borrowed_date = models.DateTimeField(default=timezone.now)
+    returned_date = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.reader.user.get_full_name()} - {self.book.title}"
+
+    class Meta:
+        ordering = ['-borrowed_date']
+"""
+# Промежуточная таблица с инф для отслеживания юзера взявшего книгу
